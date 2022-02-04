@@ -1,0 +1,22 @@
+
+// GCD of two numbers by using euclid's algorithm.
+#include<bits/stdc++.h>
+using namespace std;
+int fun(int ,int );
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int a,b;
+    cin>>a>>b;
+    //fun(a,b);
+    cout<<"Gcd is: "<<fun(a,b);
+    return 0;
+}
+
+int fun(int x,int y)
+{
+    if(x==0)
+    return y;
+    return (y%x,x);
+}
