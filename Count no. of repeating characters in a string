@@ -1,0 +1,24 @@
+// Count the number of repeating terms.
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string s;
+    cin>>s;
+    int i,c=0;
+    unordered_map<char,int>m1;
+    for(i=0;i<s.size();i++)
+    {
+        m1[s[i]]++;
+    }
+    unordered_map<char,int>::iterator it;  // Here using unordered map, because have to count only, not to print
+    for(it=m1.begin();it!=m1.end();++it)
+    {
+        if(it->second > 1)
+        c++;
+    }
+    cout<<c;
+    return 0;
+}
