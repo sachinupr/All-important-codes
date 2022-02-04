@@ -1,0 +1,18 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    string s,p="";
+    getline(cin,s);
+    int i;
+    transform(s.begin(),s.end(),s.begin(),::toupper);
+    for(i=0;i<s.size();i++)
+    {
+        p+=s[i];
+    }
+    cout<<p;
+    return 0;
+}
