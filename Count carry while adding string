@@ -1,0 +1,51 @@
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+     string M;
+     string N;
+     cin>>M>>N;
+      int n,m,count=0,i;  // So, thank you and have a great day.
+        string p="",q;
+        n=N.size();
+        m=M.size();
+        if(n==m)
+        {
+           
+        }
+        else if (n>m)
+        {
+            for(i=0;i<n-m;i++)
+            p+="0";
+            M=p+M;
+        }
+        else if (m>n)
+        {
+            for(i=0;i<m-n;i++)
+            p+="0";
+            N=p+N;
+        }
+        reverse(N.begin(),N.end());
+        reverse(M.begin(),M.end());
+        int carry=0;
+        for(i=0;i<N.size();i++)
+        {
+            int y,z;
+            y=N[i]-'0';              
+            z=M[i]-'0';              
+            if(y+z+carry > 9)
+            {
+                count++;
+                carry=(y+z+carry)/10;
+            }
+            else if (y+z+carry<=9)
+            {
+                carry=0;  
+            }
+        }
+        cout<<count;
+      return 0;
+}
+
